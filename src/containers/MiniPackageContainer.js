@@ -17,6 +17,23 @@ const mapDispatchToProps =  dispatch => ({
         payload: res
       })
     })
+  },
+  addDummyData: (randomVal) => {
+    const minipackageItem = {
+      packageNumber: randomVal,
+      receiver: "active",
+      phone: 8675309,
+      status: "Booked",
+      bookingTime: "20190101"
+    };
+    MiniPackageResource.createPackage(minipackageItem)
+    .then(res => res.json())
+    .then(res => {
+      dispatch({
+        type: 'ADD_PACKAGE',
+        payload: res
+      })
+    })
   }
 });
 
