@@ -21,7 +21,7 @@ const mapDispatchToProps =  dispatch => ({
   addDummyData: (randomVal) => {
     const minipackageItem = {
       packageNumber: randomVal,
-      receiver: "active",
+      receiver: "John",
       phone: 8675309,
       status: "Booked",
       bookingTime: "20190101"

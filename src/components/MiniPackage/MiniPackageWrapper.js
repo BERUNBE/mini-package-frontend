@@ -9,7 +9,7 @@ export default class MiniPackageWrapper extends Component {
   }
 
   addDummyDataWrapper = () => {
-    this.props.addDummyData(Math.random() * 1000);
+    this.props.addDummyData(Math.random() * 100000000);
   }
 
   render() {
