@@ -1,17 +1,16 @@
 const initialState = {
-    miniPackages: []
+  minipackages: []
   };
   
-  export default (state = initialState, { type, payload }) => {
+export default (state = initialState, { type, payload }) => {
     switch (type) {
-      case "REFRESH_TODOS":
+      case "REFRESH_PACKAGES":
         return {
           ...state,
-          todos: payload,
-          isOnlyActive: false
+          minipackages: payload
         };
       default:
         return state;
     }
-  }
+}
   

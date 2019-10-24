@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
+import MiniPackages from "./MiniPackages";
+import "./MiniPackage.css"
 
 export default class MiniPackageWrapper extends Component {
 
   componentDidMount() {
-    this.props.refreshTodos();
+    this.props.refreshMiniPackages();
   }
 
   render() {
     return (
       <div className="todo-wrapper">
-        {this.props.minipackages}
+        <MiniPackages minipackages={this.props.minipackages}/>
       </div>
     )
   }

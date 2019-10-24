@@ -3,17 +3,17 @@ import MiniPackageWrapper from '../components/MiniPackage/MiniPackageWrapper';
 import MiniPackageResource from '../api/MiniPackageResource.js';
 
 const mapStateToProps = state => ({
-    miniPackages: state.miniPackageResource.miniPackages
+  minipackages: state.miniPackageResource.minipackages
 });
 
 const mapDispatchToProps =  dispatch => ({
-  refreshTodos: () => {
+  refreshMiniPackages: () => {
     MiniPackageResource.getAll()
     .then(res => res.json())
     .then(res => {
         console.log(res);
       dispatch({
-        type: 'REFRESH_TODOS',
+        type: 'REFRESH_PACKAGES',
         payload: res
       })
     })
