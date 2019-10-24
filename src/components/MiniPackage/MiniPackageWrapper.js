@@ -11,7 +11,7 @@ export default class MiniPackageWrapper extends Component {
   render() {
     return (
       <div className="todo-wrapper">
-        <MiniPackages minipackages={this.props.minipackages}/>
+          <MiniPackages minipackages={this.props.minipackages}/>
       </div>
     )
   }

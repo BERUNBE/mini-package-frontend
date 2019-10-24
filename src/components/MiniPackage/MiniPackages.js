@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import MiniPackageItem from "./MiniPackageItem";
 
 export default class MiniPackages extends Component {
 
@@ -7,12 +6,24 @@ export default class MiniPackages extends Component {
     const {minipackages} = this.props;
     return (
       <div className="package-list">
-        {minipackages.map((minipackage, i) =>
-          <li key={i}>
-           <MiniPackageItem
-             minipackage={minipackage}/>
-          </li>)
+        <table>
+          <tr>
+            <th>Package No.</th>
+            <th>Receiver</th> 
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Booking Time</th>
+          </tr>
+          {minipackages.map((minipackage, i) =>
+          <tr key={i}>
+            <td>{minipackage.packageNumber}</td>
+            <td>{minipackage.receiver}</td>
+            <td>{minipackage.phone}</td>
+            <td>{minipackage.status}</td>
+            <td>{minipackage.bookingTime}</td>
+          </tr>)
         }
+        </table>
       </div>
     )
   }
