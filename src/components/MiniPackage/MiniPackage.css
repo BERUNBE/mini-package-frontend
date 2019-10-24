@@ -1,8 +1,9 @@
-.package-list li {
-    min-width: 20vw;
-    list-style: none;
-    max-width: 40vw;
-    display: flex;
-    justify-content: flex-start;
+.package-list table {
+    table-layout: auto;
+    width: 50%;  
+}
+
+.package-list table th {
     text-align: left;
+    color: green;
 }
